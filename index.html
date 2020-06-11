@@ -1,1 +1,439 @@
-Hello World
+
+<!DOCTYPE html>
+<html>
+<title>Derek Gagnon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a2875238e8.js"></script>
+<style>
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+button:after {
+	content: "+";
+	float: right;
+}
+
+.active:after {
+	content: "\2013";
+}
+
+</style>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+			<img src="/img/headshot.jpg" style="width:100%" alt="Avatar">
+			<div class="w3-display-bottomleft w3-container w3-text-black" style="text-shadow:1px 1px 0 #444">
+				<h2>Derek Gagnon</h2>
+			</div>
+        </div>
+        <div class="w3-container">
+			<p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Scientist</p>
+			<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>San Diego, CA</p>
+			<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>derek.gagnon.16@gmail.com</p>
+			<p><i class="fa fa-globe fa-fw w3-margin-right w3-large w3-text-teal"></i>https://www.linkedin.com/in/derek-gagnon-028bab99/</p>
+			<hr>
+			<p class="w3-xlarge"><i class="fas fa-flask w3-margin-right w3-text-teal"></i><b>Lab Skills</b></p>
+		  <!-- Also possible: <p class="w3-xlarge"><i class="fas fa-wave-square w3-margin-right w3-text-teal"></i><b>Lab Skills</b></p> -->
+
+			<button id="specButton" onclick="buttonShow('specButton')" class="w3-button w3-block w3-left-align">
+				<b>Spectroscopy</b></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li>Electron Paramagnetic Resonance (EPR/ESR)</li>
+						<li>Nuclear Magnetic Resonance (NMR)</li>
+						<li>FTIR</li>
+						<li>Fluorescence</li>
+						<li>UV/Vis and Circular Dichroism</li>
+						<li>Protein X-ray Crystallography</li>
+						<li>HPLC/FPLC</li>
+						<li>Mass Spec</li>
+					</ul>
+				</div>
+
+			<button id="biochemButton" onclick="buttonShow('biochemButton')" class="w3-button w3-block w3-left-align">
+				<b>Biochemistry/Molecular Biology</b></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li><i>E. coli</i> Protein Expression</li>
+						<li>IEX/SEC/IMAC Protein Purification</li>
+						<li>Analysis of Routine Sequencing Data</li>
+						<li>PCR Mutagenesis</li>
+						<li>Aseptic Techniques</li>
+						<li>Gel Electrophoresis</li>
+						<li>DNA Purification</li>
+						<li>Diafiltration</li>
+					</ul>
+				</div>
+
+			<button id="miscLabButton" onclick="buttonShow('miscLabButton')" class="w3-button w3-block w3-left-align">
+				<b>Misc. Lab Techniques</b></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li>Cryogen Handling</li>
+						<li>Schlenk-Line</li>
+            <li>Instrument Programming and Automation (Python/LabVIEW)</li>
+            <li>mm-Wave/Microwave/Radio Frequency Instrument Troubleshooting/Maintenance</li>
+						<li>Standard chemistry/biochemistry lab instrument maintenance</li>
+					</ul>
+				</div>
+
+			<hr>
+			<p class="w3-xlarge"><i class="fas fa-laptop-code w3-margin-right w3-text-teal"></i><b>Computer Skills</b></p>
+
+			<button id="pythonButton" onclick="buttonShow('pythonButton')" class="w3-button w3-block w3-left-align">
+				<b>Python</b><i class="arrow right"></i></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li>Data Processing</li>
+						<li>Functional Scripting</li>
+						<li>Figure Generation</li>
+            <li>Instrument Test Automation</li>
+					</ul>
+				</div>
+
+			<button id="MatlabButton" onclick="buttonShow('MatlabButton')" class="w3-button w3-block w3-left-align">
+				<b>MATLAB</b></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li>Spectral Simulation</li>
+						<li>Data Import/Export</li>
+						<li>Functional Scripting</li>
+						<li>Figure Generation</li>
+					</ul>
+				</div>
+
+			<button id="OfficeButton" onclick="buttonShow('OfficeButton')" class="w3-button w3-block w3-left-align">
+				<b>Microsoft Office</b></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li>Powerpoint</li>
+						<li>Word</li>
+						<li>Excel
+							<ul class="w3-ul w3-small">
+								<li>Pivot Tables</li>
+								<li>Contitional IF</li>
+								<li>Array Formulas</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+			<button id="MiscSoftwareButton" onclick="buttonShow('MiscSoftwareButton')" class="w3-button w3-block w3-left-align">
+				<b>Misc. Software</b></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li>R</li>
+						<li>LabVIEW</li>
+						<li>Unix/Linux Environment</li>
+						<li>Gaussian and Orca QM Software Packages</li>
+					</ul>
+				</div>
+
+			<hr>
+			<p class="w3-xlarge"><i class="fas fa-coffee w3-margin-right w3-text-teal"></i><b>Interests</b></p>
+
+			<button id="OutdoorsButton" onclick="buttonShow('OutdoorsButton')" class="w3-button w3-block w3-left-align">
+				<b>Outdoor Activities</b><i class="arrow right"></i></button>
+
+				<div class="w3-container w3-hide">
+					<ul class="w3-ul">
+						<li>Rock Climbing</li>
+						<li>Hiking</li>
+						<li>Camping</li>
+						<li>Volleyball</li>
+					</ul>
+				</div>
+
+		<br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+		<!--Begin Work Card-->
+		<div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">
+			<i class="fa fa-building fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
+			Work Experience
+		</h2>
+
+        <div class="w3-container">
+			<h5 class="w3-opacity"><b>Postdoctoral Researcher</b> <small>University of California, San Diego CA</small></h5>
+			<h6 class="w3-text-teal">
+			<i class="fa fa-calendar fa-fw w3-margin-right"></i>
+			January 2019 - February 2020</h6>
+			<p>
+			  <ul style:"w3-ul">
+				<li>Design and purification of metal binding proteins with nascent chemical reactivity</li>
+				<li>Computational design, analysis, and modeling of protein-protein interactions</li>
+				<li>Characterization of engineered proteins with x-ray crystallography and mass spectroscopy</li>
+				<li>Assay development utilizing mass spectroscopy, chromatographic, and colorimetric assays</li>
+				<li>Manuscript and grant writing</li>
+				<li>Training and mentoring of junior colleagues</li>
+			  </ul>
+			</p>
+			<hr>
+        </div>
+
+        <div class="w3-container">
+			<h5 class="w3-opacity"><b>Postdoctoral Researcher</b> <small>University of California, Davis CA</small></h5>
+			<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>September 2018 - December 2018</h6>
+			<h5 class="w3-opacity"><b>Graduate Student Researcher</b> <small>University of California, Davis CA</small></h5>
+			<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>December 2012 - August 2018</h6>
+			<p>
+				<ul style: "w3-ul">
+					<li>Magnetic/Electron paramagnetic characterization of proteins/enzymes related to the mammalian immune system (calprotectin), virulence factors (MntC and PsaA), and vitamin synthesis (BzaF vit. B12, MqnE vit. K, ThiC vit. B1)</li>
+					<li>Helped successfully acquire >$3 million in grant funding through NIH and NSF, lead on a $1.5 million grant for instrument development + additional university support</li>
+					<li>Independently saved a cumulative of $39,000+ in direct costs and 12+ months of equipment downtime by diagnosing problems, reverse engineering commercial systems, and performing repairs in house on several occasions</li>
+					<li>Design and construction of new, and maintenance/repair/upgrade of existing analytical instrumentation and helium liquefaction systems</li>
+					<li>Liaison with contractors and facilities management to ensure needs are properly communicated for continued operation and expansion of laboratory facilities/equipment</li>
+				</ul>
+			</p>
+			<hr>
+        </div>
+
+		<div class="w3-container">
+			<h5 class="w3-opacity"><b>Research Technician I</b> <small>Florida Institute of Technology, Melbourne FL</small></h5>
+			<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2012 - August 2012</h6>
+			<p>
+				<ul style: "w3-ul">
+					<li>Writing code to automate output of commercial quantum property calculation software (Spartan and Gaussian) and convert data for input to in house developed code</li>
+					<li>Simulating data collected from scanning tunneling microscopy</li>
+					<li>Assisting graduate students and researchers in daily research needs: chemical/solvent purification, analytical instrument training/support, scientific calculations/programming</li>
+				</ul>
+			</p>
+			<!--<hr> use HR for break between cards, br for end of cards for padding-->
+			<br>
+        </div>
+
+			<div class="w3-container">
+				<h5 class="w3-opacity"><b>Undergraduate Researcher</b> <small>Florida Institute of Technology, Melbourne FL</small></h5>
+				<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>September 2008 - April 2012</h6>
+				<p>
+					<ul style: "w3-ul">
+						<li>Fluorescence, UV/Vis, and FTIR characterization of candidate hydrazine sensors elucidating molecular reasons for lack of specificity</li>
+						<li>Circular dichroism characterization of DNA secondary structures stabilized by small molecules</li>
+						<li>Synthesis of small molecule natural product analogues of tryptanthrin for structure-activity relationship studies and spectroscopic characterization</li>
+						<li>Scanning tunneling microscopy to probe molecular orbitals of tryptanthrin and analogues, developing techniques to measure tunneling currents in ionic liquids and highly polar solvents</li>
+					</ul>
+				</p>
+				<!--<hr> use HR for break between cards, br for end of cards for padding-->
+				<br>
+	        </div>
+
+		<!--End Work Card-->
+		</div>
+
+		<!--Begin Education Card-->
+		<div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16">
+			<i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
+			Education
+		</h2>
+
+        <div class="w3-container">
+			<h5 class="w3-opacity"><b>Ph.D. Physical Chemistry</b> <small>UC Davis, 3.9 GPA</small></h5>
+			<h6 class="w3-text-teal">
+			<i class="fa fa-calendar fa-fw w3-margin-right"></i>
+			2012 - 2018</h6>
+			<p><i>Electron Paramagnetic Studies of Radical S-Adenosyl-L-Methionine Enzyme Intermediates and Manganese Binding Proteins</i></p>
+			<p>Advisor: Prof. R.D. Britt</p>
+			<p>Research Accomplishments
+				<ul style: "w3-ul">
+					<li>Trapping of short-lived enzyme radical intermediates</li>
+					<li>Characterization of metals bound to proteins relevant at the host-pathogen interface</li>
+					<li>Peter A. Rock Graduate Fellowship in Chemistry (2016)</li>
+					<li>Three first author publications, four co-author publications, and presented research talks or posters at 12 conferences</li>
+				</ul>
+			</p>
+			<p>Teaching Accomplishments
+				<ul style: "w3-ul">
+					<li>5 Quarters as a Chemistry TA (Lab/Discussion)</li>
+					<li>Part of a team developing active teaching methods to reform Gen Chem curriculum</li>
+					<li>Taught and maintained safe laboratory environment for students</li>
+				</ul>
+			</p>
+			<hr>
+        </div>
+
+		<div class="w3-container">
+			<h5 class="w3-opacity"><b>B.Sc. Chemistry-Research</b> <small>Florida Institute of Technology, 3.2 GPA</small></h5>
+			<h6 class="w3-text-teal">
+			<i class="fa fa-calendar fa-fw w3-margin-right"></i>
+			2008 - 2012</h6>
+			<p>Major in Chemistry with Undergraduate Thesis</p>
+			<p>Thesis Research
+				<ul style: "w3-ul">
+					<li>Spectrocopic characterization turn-on fluorescence hydrazine sensors</li>
+					<li>Analysis of strong and weak hydrogen bonding ligands that disrupt fluorescence quenching</li>
+				</ul>
+			</p>
+			<p>Other Research/Activities
+				<ul style: "w3-ul">
+					<li>Circular dichroism characterization of DNA secondary structures stabilized by small molecules</li>
+					<li>Synthesis of small molecule natural product analogues of tryptanthrin for structure-activity relationship studies and spectroscopic characterization</li>
+					<li>Scanning tunneling microscopy to probe molecular orbitals of tryptanthrin and analogues, developing techniques to measure tunneling currents in ionic liquids and highly polar solvents</li>
+					<li>Teaching assistant for physical chemistry labs</li>
+				</ul>
+			</p>
+			<hr>
+        </div>
+
+		<!--End Education Card-->
+		</div>
+
+		<!--Begin Presentation/Publication Card-->
+		<div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16">
+			<i class="fa fa-scroll fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
+			Publications and Presentations
+		</h2>
+
+        <div class="w3-container">
+			<h5 class="w3-opacity"><b>Publications</b></h5>
+			<p>Rutledge, H. L.; Rittle, J.; Williamson, L. M.; Xu, W. A.; Gagnon, D. M.; Tezcan, F. A.
+			Redox-Dependent Metastability of the Nitrogenase P-Cluster.
+			<i>J. Am. Chem. Soc.,</i> 141 (25):10091-10098, June 2019.</p>
+
+			<p>Hadley, R. C.; Gagnon, D. M.; Ozarowski, A.; Britt, R. D.; Nolan, E. M.
+				Murine Calprotectin Coordinates Mn(II) at a Hexahistidine Site with Ca(II)-Dependent Affinity.
+				<i>Inorg. Chem.,</i> 58 (20):13578-13590, October 2019.</p>
+
+			<p>Gagnon, D. M.; Hadley, R. C.; Ozarowski, A.; Nolan, E. M.; Britt, R. D.
+			High-Field EPR Spectroscopic Characterization of Mn(II) Bound to the Bacterial Solute-Binding Proteins MntC and PsaA.
+			<i>J. Phys. Chem. B,</i> 123 (23):4929-4934, June 2019.</p>
+
+			<p>Gagnon, D. M.; Stich, T. A.; Mehta, A. P.; Abdelwahed, S. H.; Begley, T. P.; Britt, R. D.
+			An Aminoimidazole Radical Intermediate in the Anaerobic Biosynthesis of the 5,6-Dimethylbenzimidazole Ligand to Vitamin B12.
+			<i>J. Am. Chem. Soc.,</i> 140 (40):12798-12807, October 2018.</p>
+
+			<p>Hadley, R. C.; Gagnon, D. M.; Brophy, M. B.; Gu, Y.; Nakashige, T. G.; Britt, R. D.; Nolan, E. M.
+		  Biochemical and Spectroscopic Observation of Mn(II) Sequestration from Bacterial Mn(II) Transport Machinery by Calprotectin.
+			<i>J. Am. Chem. Soc.,</i> 140 (1):110-113, January 2018.</p>
+
+			<p>Stich, T. A.; Gagnon, D. M.; Anderson, B. L.; Nocera, D. G.; Britt, R. D.
+			EPR Spectroscopic Characterization of a Jahn-Teller Distorted ( C  3 v  →  C s  ) Four-Coordinate Chromium(V) Oxo Species.
+			<i>Isr. J. Chem.,</i> 56 (9-10):864-871, October 2016. [<i>Invited Contribution</i>]</p>
+
+			<p>Gagnon, D. M.; Brophy, M. B.; Bowman, S. E. J.; Stich, T. A.; Drennan, C. L.; Britt, R. D.; Nolan, E. M.
+		 Manganese Binding Properties of Human Calprotectin under Conditions of High and Low Calcium: X-Ray Crystallographic and Advanced Electron Paramagnetic Resonance Spectroscopic Analysis.
+			<i>J. Am. Chem. Soc.,</i> 137 (8):3004-30016, March 2015.</p>
+
+		<hr>
+        </div>
+
+		<div class="w3-container">
+			<h5 class="w3-opacity"><b>Oral Presentations</b></h5>
+			<p>Understanding How Proteins Control Radical Reactivity
+			<i>Chemical Biology Innovation Group (CBIG)</i>, Davis CA, May 2018</p>
+
+			<p>A Radical Intermediate in the Biosynthesis of Aminofutalosine by MqnE
+			<i>Gordon Research Seminar on Bioinorganic Chemistry</i>, Ventura CA, January 2017</p>
+
+		<hr>
+        </div>
+
+		<div class="w3-container">
+			<h5 class="w3-opacity"><b>Poster Presentations</b></h5>
+
+			<p>Electron Paramagnetic Resonance Studies of Trapped Radical Intermediates in the Radical S-adenosyl-L-methionine Enzyme MqnE
+			<i>Gordon Research Seminar on Bioinorganic Chemistry</i>,
+			Ventura CA, January 2018</p>
+
+			<p>Electron Paramagnetic Resonance Studies of Trapped Radical Intermediates in the Radical S-adenosyl-L-methionine Enzyme MqnE
+			<i> Gordon Research Conference on Metals in Biology</i>,
+			Ventura CA, January 2018</p>
+
+			<p>Radical Intermediates in Radical S-adenosyl-L-methionine Enzymes Characterized with Electron Paramagnetic Resonance
+			<i> R. Brian Miller Symposium</i>,
+			Davis CA, March, 2017 </p>
+
+			<p>Radical Intermediates in Radical S-adenosyl-L-methionine Enzymes Characterized with Electron Paramagnetic Resonance
+			<i> Gordon Research Seminar on Bioinorganic Chemistry</i>,
+			Ventura CA, January, 2017 </p>
+
+			<p>Radical Intermediates in Radical S-adenosyl-L-methionine Enzymes Characterized with Electron Paramagnetic Resonance
+			<i> Gordon Research Conference on Metals in Biology</i>,
+			Ventura CA, January, 2017 </p>
+
+			<p>A Radical Intermediate in the Anaerobic Synthesis of the Lower Ligand to Vitamin B12
+			<i> Gordon Research Seminar on Bioinorganic Chemistry</i>,
+			Ventura CA, January, 2016 </p>
+
+			<p>A Radical Intermediate in the Anaerobic Synthesis of the Lower Ligand to Vitamin B12
+			<i> Gordon Research Conference on Metals in Biology</i>,
+			Ventura CA, January, 2016 </p>
+
+			<p>Manganese Binding Properties of Human Calprotectin Under Conditions of High and Low Calcium:  X-ray Crystallographic and Advanced Electron Paramagnetic Resonance Spectroscopic Analysis
+			<i> Gordon Research Seminar on Metals in Biology</i>,
+			Ventura CA, January, 2015 </p>
+
+			<p>Electron Paramagnetic Resonance (EPR) Spectroscopy in the mm-Wave Regime
+			<i>  Davis mm-Wave Research Conference</i>,
+			Davis CA, October, 2014 </p>
+
+			<p>EPR Spectroscopic Studies of the Mn(II) Binding Site in Human Calprotectin
+			<i>  Frontiers in Metallobiochemistry</i>,
+			State College PA, May 2014 </p>
+
+		<hr>
+        </div>
+
+		<!--End Presentation/Publication Card-->
+		</div>
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <!--<p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+function buttonShow(buttonID) {
+  var button = document.getElementById(buttonID);
+  button.classList.toggle("active")
+
+	button.nextElementSibling.classList.toggle("w3-show")
+}
+</script>
+
+</body>
+</html>
